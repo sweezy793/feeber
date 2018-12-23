@@ -7,7 +7,6 @@ import reduxThunk from 'redux-thunk';
 import 'materialize-css/dist/css/materialize.min.css';
 
 
-
 import App from './components/App'
 import reducers from './reducers'
 

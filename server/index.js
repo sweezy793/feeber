@@ -4,6 +4,7 @@ const passport=require('passport')
 const cookieSession=require('cookie-session')
 const authRoutes=require('./routes/authRoutes')
 const keys=require('./config/keys')
+const cors=require('cors')
 require('./models/user')
 require('./services/passport')
 
@@ -17,6 +18,8 @@ app.use(
         keys:[keys.cookieKey]
     })
 )
+
+app.use(cors());
 
 app.use(passport.initialize());
 app.use(passport.session());
